@@ -8,8 +8,8 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ThrieBeamPage from "./pages/ThrieBeamPage";
 import InquiryPage from "./pages/InquiryPage";
 import ContactUsPage from "./pages/ContactUsPage";
-import OurProducts from "src/pages/OurProducts";
-import NotFound from "src/pages/NotFound";
+import OurProducts from "./pages/OurProducts";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
