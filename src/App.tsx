@@ -9,6 +9,7 @@ import ThrieBeamPage from "./pages/ThrieBeamPage";
 import InquiryPage from "./pages/InquiryPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import OurProducts from "./pages/OurProducts";
+import NotFound from "./pages/NotFound";
 
 
 const queryClient = new QueryClient();
