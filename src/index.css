@@ -1,0 +1,149 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 24% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 24% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 24% 16%;
+
+    /* Navy Blue for corporate sections */
+    --primary: 211 54% 24%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light gray for secondary elements */
+    --secondary: 210 17% 95%;
+    --secondary-foreground: 210 24% 16%;
+
+    --muted: 210 17% 95%;
+    --muted-foreground: 210 12% 55%;
+
+    /* Golden Yellow for accents */
+    --accent: 43 74% 56%;
+    --accent-foreground: 210 24% 16%;
+
+    /* Orange for CTA buttons */
+    --cta: 18 94% 57%;
+    --cta-foreground: 0 0% 100%;
+
+    /* Red for primary actions */
+    --action: 0 76% 52%;
+    --action-foreground: 0 0% 100%;
+
+    --destructive: 0 76% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 17% 90%;
+    --input: 210 17% 90%;
+    --ring: 211 54% 24%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 211 54% 24%;
+    --foreground: 0 0% 100%;
+
+    --card: 211 54% 24%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 211 54% 24%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 211 54% 24%;
+
+    --secondary: 210 30% 18%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 30% 18%;
+    --muted-foreground: 210 17% 70%;
+
+    --accent: 43 74% 56%;
+    --accent-foreground: 211 54% 24%;
+
+    --cta: 18 94% 57%;
+    --cta-foreground: 0 0% 100%;
+
+    --action: 0 76% 52%;
+    --action-foreground: 0 0% 100%;
+
+    --destructive: 0 76% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 18%;
+    --input: 210 30% 18%;
+    --ring: 43 74% 56%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.btn-animate {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-slide-up-content {
+  transform: translateY(80px);
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+[data-state=open] .animate-slide-up-content {
+  transform: translateY(0);
+  opacity: 1;
+}
